@@ -141,6 +141,53 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-7 28 " class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/18/7 28 /">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-7.16" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -266,7 +313,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/14/新建文本文档/">my World</a>
+      <a class="article-title" href="/2018/07/14/新建文本文档/">周一标题</a>
     </h1>
   
 
@@ -279,7 +326,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="��-E"><a href="#��-E" class="headerlink" title="�� Ȩ"></a>�� Ȩ</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ �������£���</span><br></pre></td></tr></table></figure>
+        <h2 id="字典的常用操作"><a href="#字典的常用操作" class="headerlink" title="字典的常用操作"></a>字典的常用操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dic = &#123;1:&apos;one&apos;,2:&apos;two&apos;,3:&apos;three&apos;&#125;</span><br><span class="line">&gt;&gt;&gt; dic[4] = &apos;four&apos;</span><br><span class="line">&#123;1: &apos;one&apos;, 2: &apos;two&apos;, 3: &apos;three&apos;, 4: &apos;four&apos;&#125;</span><br><span class="line">如果字典中不存在指定的key，则对该字典实现元素的新增</span><br><span class="line">&#123;1: &apos;one&apos;, 2: &apos;two&apos;, 3: &apos;three&apos;, 4: &apos;four&apos;, 5: &apos;fiv&apos;&#125;</span><br><span class="line">dic[5] = &apos;five&apos;</span><br><span class="line">&#123;1: &apos;one&apos;, 2: &apos;two&apos;, 3: &apos;three&apos;, 4: &apos;four&apos;, 5: &apos;five&apos;&#125;</span><br><span class="line">如果字典中存在指定的key，那么对key对应的value进行修改</span><br></pre></td></tr></table></figure>
+<p>##字典的删除<br>‘’’第一种，使用del进行字典内容的删除<br>del dic[key]    删除指定可以对应的value内容<br>del dic         删除整个字典，并释放其所占内存<br>第二种，使用pop()函数，删除指定key对应的value内容<br>函数格式：dict.pop(key)  ，其中参数为字典中的key值<br>返回值：返回所删除key对应的value内容<br>第三种，使用clear()函数，清空字典中所有内容<br>函数格式：dict.clear()<br>返回值：清空字典内容，返回一个空字典<br>第四种：popitem()，删除字典中的键值对<br>函数格式：dict.popitem()<br>返回值：会在字典尾部，弹出键值对并删除，将删除的键值对按照元组类型返回</p>
+<p>‘’’</p>
+<p>##检索字典<br>‘’’第一、查询指定的value,通过指定的key找到对应的value<br>dic[1] = &gt; ‘one’<br>第二、遍历字典<br>for key in dic:<br>    dic[key]</p>
+<p>‘one’<br>‘two’<br>‘three’<br>‘four’<br>‘five<br>4）字典与列表、元组的转换<br>列表转成字典<br>list1 = [[1,’one’],[2,’two’],[3,’three’]]<br>或<br>list1 = [(1,’one’),(2,’two’),(3,’three’)]<br>dic = dict(list1)<br>{1: ‘one’, 2: ‘two’, 3: ‘three’}<br>元组转成字典<br>tup = ((1,’one’),(2,’two’),(3,’three’))<br>dic = dict(tup)<br>{1: ‘one’, 2: ‘two’, 3: ‘three’}<br>注意：不管是元组还是列表，其作为key的那个值必须是不可变数据类型。<br>同时，我们对字典进行新增和修改时，其key可以使用True或False，但是要注意在使用他们时字典会首先对已有的key进行比对，如果有重复的则进行修改（True==1，False==0）</p>
+<p>使用zip()函数生成字典<br>函数格式：zip(iter1,iter2,….)<br>返回值：返回一个zip对象<br>我们通过zip函数，指定对应的元组，分别来作为字典的key和 value，生成zip对象转成字典数据。<br>例如：<br>dict(zip((‘id’,’name’,’city’),(1,’hhp’,’zhengzhou’)))<br>    ‘’’</p>
+<p>###常用函数<br>‘’’fromkeys(),通过指定的key集合，生成一个新字典，其value值缺省为None<br>函数格式：dict.fromkeys(iter1[,value]) 其中iter1为可迭代化集合，比如：列表、元组；value可以是任意数据类型。<br>返回值：返回一个新字典，其中key为我们在参数中使用的iter1集合，值都为None或者指定的value。比如：<br>dic3 = dict({‘a’:’one’,’b’:’two’,’c’:’three’})<br>a = dic3.fromkeys([1,2,3])<br>{1: None, 2: None, 3: None}</p>
+<p>dic3 = dict({‘a’:’one’,’b’:’two’,’c’:’three’})<br>a = dic3.fromkeys([1,2,3],[‘a’,’b’,’c’])<br>{1: [‘a’, ‘b’, ‘c’], 2: [‘a’, ‘b’, ‘c’], 3: [‘a’, ‘b’, ‘c’]}<br>讨论：<br>列表的可迭代化<br>当生成一个空列表时，因为列表中没有值，所以python并没有相应的内存地址分配给这个列表变量，当该列表添加元素后，python会自动给该列表扩充内存地址，那么地址都是依次连续的在内存中进行排列。’’’</p>
+
       
 
       
