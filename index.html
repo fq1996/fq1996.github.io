@@ -334,6 +334,7 @@
 <p>使用zip()函数生成字典<br>函数格式：zip(iter1,iter2,….)<br>返回值：返回一个zip对象<br>我们通过zip函数，指定对应的元组，分别来作为字典的key和 value，生成zip对象转成字典数据。<br>例如：<br>dict(zip((‘id’,’name’,’city’),(1,’hhp’,’zhengzhou’)))<br>    ‘’’</p>
 <p>###常用函数<br>‘’’fromkeys(),通过指定的key集合，生成一个新字典，其value值缺省为None<br>函数格式：dict.fromkeys(iter1[,value]) 其中iter1为可迭代化集合，比如：列表、元组；value可以是任意数据类型。<br>返回值：返回一个新字典，其中key为我们在参数中使用的iter1集合，值都为None或者指定的value。比如：<br>dic3 = dict({‘a’:’one’,’b’:’two’,’c’:’three’})<br>a = dic3.fromkeys([1,2,3])<br>{1: None, 2: None, 3: None}</p>
 <p>dic3 = dict({‘a’:’one’,’b’:’two’,’c’:’three’})<br>a = dic3.fromkeys([1,2,3],[‘a’,’b’,’c’])<br>{1: [‘a’, ‘b’, ‘c’], 2: [‘a’, ‘b’, ‘c’], 3: [‘a’, ‘b’, ‘c’]}<br>讨论：<br>列表的可迭代化<br>当生成一个空列表时，因为列表中没有值，所以python并没有相应的内存地址分配给这个列表变量，当该列表添加元素后，python会自动给该列表扩充内存地址，那么地址都是依次连续的在内存中进行排列。’’’</p>
+<p>###大标题</p>
 
       
 
