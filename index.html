@@ -141,6 +141,76 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-7.21" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/21/7.21/">周末总结</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/21/7.21/" class="archive-article-date">
+  	<time datetime="2018-07-21T06:06:18.980Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="方-权"><a href="#方-权" class="headerlink" title="方 权"></a>方 权</h2><p>字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2、比较运算符：&gt;、&lt;、==、!=、&gt;=、&lt;=</span><br><span class="line">他们的返回值为布尔型，即True或False</span><br><span class="line">字符串进行比较时，采用对应位置的逐字母进行比较，首先将字母转成ASCII码，然后根据码值进行比较大小。如果一旦出现一方的字母码值大于另一方，就结束比较。</span><br><span class="line">提示：在键盘上，所有的字符的ASCII码值都小于a,b,c.....这些字母的码值</span><br></pre></td></tr></table></figure></p>
+<p>find() 查找<br><code></code>函数格式：str.find(子字符串[,开始索引位，结束索引位])<br>返回值：如果查找成功，则返回所查找内容在字符串中的索引位置，如果没有找到，返回-1.<br>注意：如果所查找的内容中，有多个相同的字母，只会返回第一个字母所在的索引位。比如：<br>str1 = ‘hello’<br>str1.find(‘ll’) =&gt; 2  该例中，’ll’在字符串中出现了两次，但只会返回第一次出现的索引位置。<br>为什么查找时，没有找到目标字符串的情况下会返回-1。其实，在find操作中，会对字符串进行扫描从字符串的索引位0开始，一直到字符串结尾<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">index() 返回指定字符的索引位</span><br><span class="line">``` 函数格式：index(子字符串[,开始索引位，结束索引位])</span><br><span class="line">返回值：如果找到指定的字符串，则返回其索引位；如果找不到就报错ValueError</span><br></pre></td></tr></table></figure></p>
+<p>find()与index()函数的区别<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">第二，find()如果找不到指定的字符时，返回-1；而index()找不到指定的字符，raise ValueError.</span><br><span class="line">第三，从效率上来讲，index的查询速度要优于find,因为在python中对于像字符串这样的有序数据类型，会产生一个索引对象来自动维护其序列</span><br></pre></td></tr></table></figure></p>
+<p>split() 拆分字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">返回值：根据指定的分隔符，对字符串进行拆分，返回一个列表；如果不指定分隔符，那么会将整个字符串，作为列表的一个元素注意：split中的分隔符，我们根据字符串中的实际情况而定。如果使用了不正确的分隔符，str.split(&apos;错误分隔符&apos;)操作结果str.split(),会将整个字符串作为列表的一个元素。</span><br></pre></td></tr></table></figure></p>
+<p>strip() 字符串左右两端去除指定字符（默认情况，去除空格）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">返回值：根据指定的字符，对字符串进行两端去除其内容，返回一个新的字符串。如果字符串中间有空格或指定字符，那么该函数不起作用。如果指定的字符在字符串左右两端不存在，那么将返回字符串本身。</span><br><span class="line">例如：</span><br><span class="line">缺省情况</span><br></pre></td></tr></table></figure></p>
+<p>指定字符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; string1.strip(&apos;a&apos;)</span><br><span class="line">&apos;welcom to zhengzhou&apos;</span><br></pre></td></tr></table></figure></p>
+<p>replace()替换函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">返回值：将指定字符串（old）替换为新字符串（new）,最大可以替换max次。替换完成后，返回一个新字符串。</span><br><span class="line">注意：此处的max参数，主要用来指定替换的次数，如果该参数缺省，表示替换里面所有符合条件的字符串。</span><br></pre></td></tr></table></figure></p>
+<p>isalnum()、isalpha()、isdigit()<br><figure class="highlight plain"><figcaption><span>判断字符串内容，是否有数字或字母组成</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">          str.isalpha()    判断字符串内容，是否由字母组成</span><br><span class="line">          str.isdigit()    判断字符串内容，是否由数字组成</span><br><span class="line">返回值：如果符合条件，返回True；如果不符合，返回False。</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/21/7.21/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-7.191" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
